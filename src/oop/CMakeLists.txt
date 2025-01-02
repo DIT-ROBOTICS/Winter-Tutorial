@@ -142,6 +142,9 @@ target_link_libraries(oop_ex1 ${catkin_LIBRARIES})
 add_executable(oop_ex2 src/oop_ex2.cpp)
 target_link_libraries(oop_ex2 ${catkin_LIBRARIES})
 
+add_executable(oop_ex3 src/oop_ex3.cpp)
+target_link_libraries(oop_ex3 ${catkin_LIBRARIES})
+
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
 ## target back to the shorter version for ease of user use

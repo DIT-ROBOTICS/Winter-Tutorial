@@ -25,7 +25,6 @@ void Chassis::output(){
     }
 
 int main(){
-    float time=0.0;
     float wheels[2]={3.0, 3.0};
     Chassis diff(10.0, 10.0, 0.0, wheels);
     for(int i=0;i<5;i++){
