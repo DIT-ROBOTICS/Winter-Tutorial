@@ -35,7 +35,7 @@ RUN apt-get update && apt-get dist-upgrade -y \
     && apt-get autoclean -y \
     && rm -rf /var/lib/apt/lists/*
 
-ENV SHELL /bin/bash
+ENV SHELL=/bin/bash
 ENV TERM=xterm-256color
 
 USER $USERNAME
