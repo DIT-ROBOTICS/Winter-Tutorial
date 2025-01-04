@@ -8,9 +8,11 @@ project(message)
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
 find_package(catkin REQUIRED COMPONENTS
+  geometry_msgs
   roscpp
   rospy
   std_msgs
+  turtlesim
 )
 
 ## System dependencies are found with CMake's conventions
@@ -70,7 +72,7 @@ find_package(catkin REQUIRED COMPONENTS
 ## Generate added messages and services with any dependencies listed here
 # generate_messages(
 #   DEPENDENCIES
-#   std_msgs
+#   geometry_msgs#   std_msgs
 # )
 
 ################################################
@@ -105,7 +107,7 @@ find_package(catkin REQUIRED COMPONENTS
 catkin_package(
 #  INCLUDE_DIRS include
 #  LIBRARIES message
-#  CATKIN_DEPENDS roscpp rospy std_msgs
+#  CATKIN_DEPENDS geometry_msgs roscpp rospy std_msgs turtlesim
 #  DEPENDS system_lib
 )
 
@@ -144,7 +146,12 @@ include_directories(
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
+add_executable(talker src/talker.cpp)
+target_link_libraries(talker ${catkin_LIBRARIES})
+add_executable(listener src/listener.cpp)
+target_link_libraries(listener ${catkin_LIBRARIES})
+add_executable(turtle_homework src/turtle_homework.cpp)
+target_link_libraries(turtle_homework ${catkin_LIBRARIES})
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
