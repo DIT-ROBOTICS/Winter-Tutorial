@@ -140,18 +140,18 @@ include_directories(
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-add_executable(talker src/talker.cpp)
-target_link_libraries(talker ${catkin_LIBRARIES})
-add_executable(listener src/listener.cpp)
-target_link_libraries(listener ${catkin_LIBRARIES})
+add_executable(day2_talker src/day2_talker.cpp)
+target_link_libraries(day2_talker ${catkin_LIBRARIES})
+add_executable(day2_listener src/day2_listener.cpp)
+target_link_libraries(day2_listener ${catkin_LIBRARIES})
 add_executable(turtle_homework src/turtle_homework.cpp)
 target_link_libraries(turtle_homework ${catkin_LIBRARIES})
 
-add_executable(talker1 src/talker1.cpp)
-target_link_libraries(talker1 ${catkin_LIBRARIES})
+add_executable(day3_practice_talker src/day3_practice_talker.cpp)
+target_link_libraries(day3_practice_talker ${catkin_LIBRARIES})
 
-add_executable(listener1 src/listener1.cpp)
-target_link_libraries(listener1 ${catkin_LIBRARIES})
+add_executable(day3_practice_listener src/day3_practice_listener.cpp)
+target_link_libraries(day3_practice_listener ${catkin_LIBRARIES})
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
