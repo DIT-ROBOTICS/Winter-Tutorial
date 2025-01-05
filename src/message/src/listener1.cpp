@@ -1,8 +1,8 @@
 #include "ros/ros.h"
 #include "std_msgs/Int64.h"
-#include "beginner_tutorials/example.h"
+#include "message/example.h"
 
-void Callback(const beginner_tutorials::example::ConstPtr& msg)
+void Callback(const message::example::ConstPtr& msg)
 {
     printf("(%ld, %s, %d)\n",msg->id,msg->name.c_str(),msg->age);
 }
