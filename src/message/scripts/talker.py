@@ -1,9 +1,7 @@
-#!/usr/bin/env python3 
-#coding:utf-8
-
+# !/usr/bin/env python3 
+# coding:utf-8
 import rospy
 from std_msgs.msg import Int64
-
 def publisher():
     rospy.init_node('talker')
     pub = rospy.Publisher('counter', Int64, queue_size = 10)

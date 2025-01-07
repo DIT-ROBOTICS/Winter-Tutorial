@@ -148,9 +148,11 @@ target_link_libraries(turtle_homework ${catkin_LIBRARIES})
 
 add_executable(day3_practice_talker src/day3_practice_talker.cpp)
 target_link_libraries(day3_practice_talker ${catkin_LIBRARIES})
+add_dependencies(day3_practice_talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 add_executable(day3_practice_listener src/day3_practice_listener.cpp)
 target_link_libraries(day3_practice_listener ${catkin_LIBRARIES})
+add_dependencies(day3_practice_listener ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
