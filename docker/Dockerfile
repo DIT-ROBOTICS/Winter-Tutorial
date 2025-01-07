@@ -15,10 +15,10 @@ RUN apt-get update && apt-get install -y \
     bash-completion
 
 RUN apt-get update && apt-get install -y \
-    ros-humble-dynamixel-sdk \
-    ros-humble-turtlebot3-msgs \
-    ros-humble-turtlebot3 \
-    ros-humble-gazebo-ros-pkgs \
+    ros-noetic-dynamixel-sdk \
+    ros-noetic-turtlebot3-msgs \
+    ros-noetic-turtlebot3 \
+    ros-noetic-gazebo-ros-pkgs
 
 RUN apt-get update && apt-get dist-upgrade -y \
     && apt-get autoremove -y \
