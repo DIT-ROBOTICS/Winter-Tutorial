@@ -3,8 +3,8 @@ services:
   ros1-tutorial-ws:
     build:
       context: .
+      dockerfile: Dockerfile
       args:
-        USERNAME: user
     image: dit/tutorial-ws-noetic:latest
     container_name: tutorial-ws-ros1
     stdin_open: true
@@ -28,5 +28,7 @@ services:
       # Direct Rendering Infrastructure
       - /dev:/dev
       - ../:/home/user/tutorial_ws
+    devices:
+      - /dev/bus/usb
 
-    command: /bin/bash
+    command: /bin/bash -c "source /opt/ros/noetic/setup.bash && exec bash"
