@@ -1,5 +1,0 @@
-<launch>
-    <node name="day6_practice" pkg="service" type="day6_practice" />
-    <rosparam command="load" file="$(find service)/config/Practice-Param.yaml" />
-    <node name="turtlesim_node" pkg="turtlesim" type="turtlesim_node"/>
-</launch>
