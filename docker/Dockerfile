@@ -28,6 +28,9 @@ RUN apt-get update && apt-get install -y \
     python3-pip \
     bash-completion
 
+RUN echo "source /opt/ros/humble/setup.bash" >> /etc/bash.bashrc \ 
+    && echo "source /home/user/ros_tutorial/ros2_ws/install/setup.bash" >> /etc/bash.bashrc
+
 RUN apt-get update && apt-get dist-upgrade -y \
     && apt-get autoremove -y \
     && apt-get autoclean -y \
