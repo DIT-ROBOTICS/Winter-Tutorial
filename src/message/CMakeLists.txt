@@ -19,7 +19,6 @@ find_package(catkin REQUIRED COMPONENTS
 ## System dependencies are found with CMake's conventions
 # find_package(Boost REQUIRED COMPONENTS system)
 
-
 ## Uncomment this if the package has a setup.py. This macro ensures
 ## modules and global scripts declared therein get installed
 ## See http://ros.org/doc/api/catkin/html/user_guide/setup_dot_py.html
@@ -139,6 +138,7 @@ include_directories(
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 # add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+
 add_executable(day2_talker src/day2_talker.cpp)
 target_link_libraries(day2_talker ${catkin_LIBRARIES})
 add_executable(day2_listener src/day2_listener.cpp)
@@ -153,7 +153,6 @@ add_dependencies(day3_practice_talker ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catk
 add_executable(day3_practice_listener src/day3_practice_listener.cpp)
 target_link_libraries(day3_practice_listener ${catkin_LIBRARIES})
 add_dependencies(day3_practice_listener ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
 ## Specify libraries to link a library or executable target against
 # target_link_libraries(${PROJECT_NAME}_node
 #   ${catkin_LIBRARIES}
