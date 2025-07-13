@@ -1,0 +1,9 @@
+cpp_pubsub:
+ros__parameters:
+    message_prefix: "Hello from CPP" # string
+    publish_frequency: 2.0           # floating
+
+py_pubsub:
+ros__parameters:
+    message_prefix: "Hello from Python" # string
+    publish_frequency: 1.0              # floating

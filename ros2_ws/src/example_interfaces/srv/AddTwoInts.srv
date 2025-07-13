@@ -1,0 +1,4 @@
+int64 a  # request要送的資料
+int64 b  # request要送的資料
+---
+int64 sum  # response會回傳的資料
