@@ -14,7 +14,7 @@ find_package(builtin_interfaces REQUIRED)
 find_package(rosidl_default_generators REQUIRED)
 
 rosidl_generate_interfaces(example_interfaces
-    "action/Fibonacci.action"
+    "srv/AddTwoInts.srv"
     DEPENDENCIES geometry_msgs action_msgs std_msgs builtin_interfaces
 )
 
