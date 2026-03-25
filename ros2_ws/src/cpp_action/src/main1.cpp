@@ -1,6 +1,6 @@
 #include <rclcpp/rclcpp.hpp>
 #include <rclcpp_action/rclcpp_action.hpp>
-#include "example_interfaces/action/Counter.hpp"
+#include "example_interfaces/action/counter.hpp"
 
 #include "cpp_action/counter_client.hpp"
 #include "cpp_action/counter_server.hpp"
